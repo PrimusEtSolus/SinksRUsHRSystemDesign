@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Employee List</title>
+</head>
+<body class="bg-gray-100 p-6">
+    <table class="min-w-full bg-white">
+        <thead>
+            <tr>
+                <th class="py-2">Name</th>
+                <th class="py-2">Job Title</th>
+                <th class="py-2">Department</th>
+                <th class="py-2">Email</th>
+                <th class="py-2">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Example employee data -->
+            <tr>
+                <td>John Doe</td>
+                <td>Software Engineer</td>
+                <td>IT</td>
+                <td>john.doe@example.com</td>
+                <td><button class="bg-blue-500 text-white p-1 rounded" onclick="openModal()">Info</button></td>
+            </tr>
+            <!-- Additional employee rows would go here -->
+        </tbody>
+    </table>
+    <!-- Modal for Employee Info -->
+    <div id="modal" class="hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center">
+        <div class="bg-white p-4 rounded">
+            <h2 class="text-lg font-bold">Employee Info</h2>
+            <p>Details about the employee will go here.</p>
+            <button onclick="closeModal()" class="bg-red-500 text-white p-1 rounded">Close</button>
+        </div>
+    </div>
+    <script>
+        function openModal() {
+            document.getElementById('modal').classList.remove('hidden');
+        }
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
